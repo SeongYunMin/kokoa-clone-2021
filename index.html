@@ -1,0 +1,39 @@
+<!-- 첫 html파일의 이름을 inde.html로 한 이유는 대부분의 웹서버가
+    디폴트로 index.html을 찾아보도록 설정되어있기 때문!! index는 첫번째 라는 뜻 -->
+
+<!-- html을 빨리뻘리 해치우기 위해 단축키를 쓸 것이다.
+        1.빈 창에 느낌표를 치고 enter를 누르면 아래처럼 기본 바탕이 나오게 된다 
+        title만 원하는 걸로 바꿔주자
+        2. shift+alt+방향키(위,아래) 는 현재 행을 바로 위 또는 아래로 복붙
+        3. div class="name" 은 그냥 div.name 쓰면 되고
+            div id="id" 는 그냥 div#id 하면 된다-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div id="status-bar">
+      <!--상태 바를 먼저 만들어보자-->
+      <div class="status-bar__column">
+        <!--이렇게 긴 클래스 이름을 쓰는 이유는 이 클래스명만 봐도 상태바의 
+            컬럼을 의미하는 구나 알 수있기 때문 그래서 이렇게 부모__자식 형태
+            로 class 이름을 지어주는 것이 좋다-->
+        <span>No Service</span>
+        <!--To Do: WIFI Icon-->
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <!-- Battery Icon -->
+        <!-- Lightning Icon -->
+      </div>
+    </div>
+  </body>
+</html>
