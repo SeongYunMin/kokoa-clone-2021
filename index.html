@@ -37,3 +37,24 @@
     </div>
   </body>
 </html>
+<!-- BEM에 대해 알아보자!!
+  block__element--modifrer 순으로 class 네임을 지정하는 것을 의미한다
+  예를들어 가격 버튼을 만든다고 치면 class name을 btn__price 로 하나 짓고
+  오렌지색 버튼을 뜻하는 클래스 네임은 btn--orange라고 짓는 것이다
+그리고 오렌지색 가격 버튼은 html에서
+ <div class="btn__price btn--orange">price</div> 이렇게 표현할 수 있다
+ 이 규칙은 다른 사람이 읽어도 이 블락이 무슨 용도인지 알게 해준다
+ 이렇게 프로그래머들은 코드를 짤때 무조건 class로 짜고 class name은 BEM을
+ 따르도록 룰을 정했다. id는 잘 안 쓰고 class를 쓴다 이렇게 BEM 규칙을 
+ 따르게 되면 나는 html과 css를 다른 파일에 짤때 "아 class name 이 뭐였지?"
+ 하고 두 파일을 번갈아 보는 일이 줄어들게 된다. 매우 useful하다
+-->
+<!-- 
+  <a href="#" class="btn btn--big btn--orange">
+  <span class="btn__price">$9.99</span>
+  <span class="btn__text">Subscribe</span>
+  이런식으로 하게 되면 a 태그는 오렌지색 큰 버튼이라는 것을 알게 되고
+  a태그의 내용은 가격과 글자가 있음을 클래스 이름만 봐도 알게 된다
+  즉 코드 읽기가 매우 쉬워진다
+</a> -->
+<!-- bem의 문제점은 뭐냐 바로 클래스 네임이 매우매우 길어질 수 있다는 것이다 -->
