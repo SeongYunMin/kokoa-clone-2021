@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- link:css 라고 치고 enter를 누르면 자동으로
+        styles.css 파일을 불러오는 코드가 입력 된다
+        근데 default값으로 그냥 style.css가 설정되어있는데
+        우리는 css라는 폴더 내의 styles.css 파일에 저장했으므로
+        css/sytles.css 라고 href 속성에 넣어줘야한다
+        이런 단축키는 외울것!! -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div id="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>10%</span>
+        <i class="fas fa-battery-quarter"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to KokoaClone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+    <!-- 우리가 만들 html에는 많은 header 태그 있을것 그러므로 
+        클래스 네임(welcome-header)을 지어주자 -->
+
+    <!-- 이제 계정을 입력하는 form을 만들어보자  -->
+    <form id="login-form">
+      <!--  앞으로 form은 계정 만드는 것 외에는 거의 안 쓸것 같으므로 id를 주자 -->
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <!-- <button>이라는 태그를 써서 버튼을 만들 수도 있다 -->
+      <a rhef="#">Find Kokoa Account or Password</a>
+      <!-- 링크는 앞으로도 매우 많을 것이기 때문에 이 링크 하나만을 위해
+            클래스나 아이디를 부여하진 않겠다!! -->
+    </form>
+    <script
+      src="https://kit.fontawesome.com/207aabff9e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

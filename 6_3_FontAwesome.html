@@ -1,0 +1,49 @@
+<!-- 아이콘을 넣어보자!! -->
+<!-- 두가지 옵션이 있는데 하나는 직접 아이콘을 구하는 방법이다
+    직접 이미지 만들어서 추출하거나 svg파일 이용하는 방법이 있다
+    svg는 픽셀이 없는 이미지 파일이고 수학으로만 구성되어있다
+    좌표로 돼있어서 원하는 만큼 늘릴 수 있다
+
+    아이콘을 가져올 수 있는 첫째로 사이트는 Heroicons 가 있다
+    여기서 원하는 아이콘 검색하고 여기에 복붙하면 svg파일로 인식되어
+    .jpg처럼 픽셀로 입력되는 것이 아닌 svg라는 태그에 묶인채로 입력된다
+    
+    두번째 사이트는 바로 FontAwesome 이라는 사이트이다 이 사이트를 주로 쓸것
+    이 사이트에서 kit code를 발급받았다 이 kitcode는 기본적으로 JS파일인데
+    이 파일은 우리 프로젝트 안에 폰트를 import하는 역할을 한다 
+    이 kit code는 <script> 라는 태그에 쌓여 있는데 얘는 항상 body 태그를 닫기
+    직전에 넣어줘야 한다 따라서 아래처럼 코드 킷을 복붙해 넣어주면 코드 킷이
+    설치된 것이다 그리고 원하는 아이콘 검색해서 src주소 복붙해주면 된다-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div id="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+        <!-- 2. 이렇게 FontAwesome에서 svg코드 복붙해서 필요한 위치에 복붙해서
+                쓰면 된다 여기 i 는 icon의 약자이다-->
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>10%</span>
+        <i class="fas fa-battery-quarter"></i>
+        <i class="fas fa-bolt"></i>
+        <!-- 이럴게 필요한 아이콘을 찾아서 넣을 수 있다 -->
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/207aabff9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 1. Kit Code는 이렇게 body를 닫기 직전에 넣어줘야한다 -->
+  </body>
+</html>
