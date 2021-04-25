@@ -127,3 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+input{
+  outline: none;
+}
+/* 이 input에 줄 속성을 여기다 써서 앞으로 모든 input을 focus 할때
+  거슬리는 outline 생기지 않도록 할 수 있다*/

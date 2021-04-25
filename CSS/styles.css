@@ -5,6 +5,8 @@
 @import "status-bar.css";
 /* status bar 스타일시트는 status-bar.css에 저장해 놨다 거기서 import 해왔다
   거기로 가서 status-bar 만드는 법 배워보삼 */
+@import "valuables.css";
+/* 변수 쓰고싶으면 이렇게 import를 해줘야 한다 */
 
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -27,9 +29,17 @@ body {
 
 /* 헤더를 꾸며보자 */
 .welcome-header {
-  margin-top: 145px;
+  margin: 90px 0px;
   text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*  부모엘레먼트를  flex container로 만들어 welcome-header__text를 가운데          정렬시키자    */
+    /* font-weight: 600; 
+    이렇게 하면 폰트의 두께를 조절할 수 있긴한데 open sans 글씨체가
+    600(너무 두꺼움) 밖에 없어서 그냥 기본을 쓰기로 함*/
 }
+
 /* 헤더 박스는 마진을 top으로 145px 만큼 줬고 h1과 p 같은 글자를 정렬할 때 쓰는
   text-align 속성을 center로 먹여줬다 픽셀 값 알기 위해서 page-ruler 프로그램 쓰자 */
 .welcome-header__title {
@@ -37,10 +47,42 @@ body {
   font-size: 25px;
 }
 .welcome-header__text {
-  display: flex;
-  width: 50%;
+  width: 40%;
+  opacity: 0.7;
   /* 카카오톡의 문구는 창 사이즈를 조절해도 일정한 레이아웃을 유지한다 
     그렇게 하기 위해선 width를 퍼센트로 주면 된다 창의 50%, 즉 절반만 항상
     차지하고 있어라 라는 뜻 */
-  justify-content: center;
+/*   opacity 0.7*/
 }
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+  #login-form input{
+    padding: 10px 0;
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    transition: border-color 1s ease-in-out;
+    /*이렇게 border-color에다가 전환효과를 줘서 focus 됐을때 스무스하게 보더 컬러가 전환되게 해보자 */
+  }
+   /* 이제부터 form을 꾸며보자 form을 우선 flex-container로 만들어서 로그인
+      비번 창을 세로로 바꾸고 input의 패딩을 좀 줘서 창을 뚱뚱하게 만들자
+      경계는 none으로 설정해서 보더 안보이게 해버려 그리고 보더 바텀을 검은색 줄을 그어 버리는 거야
+      그리고 마진 바텀을 줘서 각 인풋들 사이를 조금 뛰우자*/
+      
+  #login-form input::placeholder{
+    color: var(--placeholder-color);
+  }
+  /* placeholder에도 투명도를 먹여서 일체감 있게 만들자 */
+  /* 또 하나 해야될게 커서가 input창에 focus될떄 자꾸 안예쁜 틀이 생긴다 이를 이 클론에서 모두 한꺼번에 없애기 위해 reset.css로 가서 outline을 none으로 해주자 */
+  #login-form input:focus{
+    border-color: var(--focused-color);
+  }
+  /* focus 됐을때 보더 컬러도 조금더 진해지게 설정해보자 */
+  /* 근데 항상 이렇게 rgba로 컬러 속성을 먹이기 귀찮으므로 변수(valuables)를 써서 색상을 지정해보자 */
+      
+    
+
