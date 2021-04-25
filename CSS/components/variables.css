@@ -1,0 +1,5 @@
+:root{
+  --yellow: yellow;
+  --placeholder-color: rgba(0,0,0,0.3);
+  --focused-color: rgba(0,0,0,0.5);
+}

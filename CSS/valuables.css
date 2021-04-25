@@ -1,8 +1,0 @@
-:root{
-  --yellow: yellow;
-  --placeholder-color: rgba(0,0,0,0.3);
-  --focused-color: rgba(0,0,0,0.5);
-}
-/* 이런식으로 변수를 만들어서 쓸 수 있다
-  근데 이렇게 쓸려면 변수명이 --로 시작해야 되고
-  styles.css에서 import를 해야 쓸 수 있디*/

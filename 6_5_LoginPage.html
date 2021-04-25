@@ -26,10 +26,15 @@
       <h1 class="welcome-header__title">Welcome to KokoaClone</h1>
       <p class="welcome-header__text">
         If you have a Kokoa Account, log in with your email or phone number.
-      </p>
+        </p>
     </header>
 
-    <form id="login-form">
+    <form action="6_9_FriendsPage.html" method="get" id="login-form">
+       <!-- form 엘레먼트를 통해 다른 페이지로 넘어갈 수 있다
+       그 방법은 바로 action 과 method 라는 어트리븉을 쓰는 것!!
+       action 어트리븉에 넘어갈 html파일을 넣으면 되고 method에는 GET 또는 POST를 넣어서 넘어가는 방법을 정할 수 있는데
+       GET은 그냥 파일을 불러오는 것이고 POST는 서버에 정보를 전송하는 방식이다 우리는 서버 없으므로 GET방식을 쓸 것이다
+       얘는 보안에 취약하므로 아이디 비번은 POST를 통해 넘어가야 한다 -->
       <input type="text" placeholder="Email or phone number" />
       <input type="password" placeholder="Password" />
       <input type="submit" value="Log In" />
