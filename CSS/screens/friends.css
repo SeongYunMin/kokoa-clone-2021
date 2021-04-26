@@ -1,0 +1,15 @@
+/* 이 스크린에서만 쓸 것들은 다 screens폴더에 있는 파일에 저장한다 */
+#friends-names__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  background-color: #fafafa;
+}
+#friends-names__display span {
+  margin-left: 1px;
+  opacity: 0.8;
+}
+#friends-names__display i {
+  opacity: 0.3;
+}

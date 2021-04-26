@@ -20,7 +20,7 @@
 /* import를 할 때 중요한 것은 css는 캐스캐이딩하게 코드를 읽으므로
     font,reset,variable등 모든 css시트에서 범용적으로 쓰일 코드들을
     앞에 배치해야 한다 그래야 정상적으로 속성이 먹여진다 */
-
+@import "components/user_component.css";
 
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

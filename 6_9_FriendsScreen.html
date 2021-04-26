@@ -42,8 +42,9 @@
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="#">
-            <span class="nav__notification">1</span>
-            <i class="far fa-comment fa-2x"></i>
+            <i class="far fa-comment fa-2x">
+              <span class="nav__notification">1</span>
+            </i>
           </a>
         </li>
         <li class="nav__btn">
@@ -65,11 +66,41 @@
     <header class="screen-header">
       <h1 class="screen-header__title">Friends</h1>
       <div class="screen-header__icons">
-        <span><i class="fas fa-search fa-lg"></i></span>
         <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-search fa-lg"></i></span>
         <span><i class="fas fa-cog fa-lg"></i></span>
       </div>
     </header>
+
+    <div id="friends-names__display">
+      <a href="#">
+        <i class="fas fa-info-circle"></i>
+        <span>Friends' Names Display</span>
+        <i class="fas fa-chevron-right fa-xs"></i>
+        <!-- chevron은 >를 의미 -->
+      </a>
+    </div>
+
+    <div class="user-component">
+      <!-- friend-names__display 아래에 나오는 부분은 다른 페이지에서도
+          사용될 부분이다 따라서 따로 component폴더에 css파일을 만들 것이다 -->
+      <div class="user-component__column">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Alberto_conversi_profile_pic.jpg"
+          class="user-component__avatar"
+        />
+        <div class="user-component__text">
+          <h4 class="user-component__name">SeongYun</h4>
+        </div>
+      </div>
+      <!-- 프로필 사진과 이름이 들어갈 두개의 블락을 user-component__column
+          이라는 블락 안에다가 만들었다  -->
+
+      <div class="user-component__column"></div>
+      <!-- 이 칼럼은 오른쪽에 따로 누를 수 있는 버튼 있을 때(Channel 박스 오른쪽
+            끝 버튼같은거)쓸 블락들이다 일단 비워둠  -->
+    </div>
+
     <script
       src="https://kit.fontawesome.com/207aabff9e.js"
       crossorigin="anonymous"

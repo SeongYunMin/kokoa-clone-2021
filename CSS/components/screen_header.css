@@ -1,5 +1,16 @@
-.screen-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 20px;
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px 20px 20px;
+  align-items: center;
 }
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 20px;
+}
+/* 이렇게 header를 만들고 나면 다른 스크린에도 이 서식을 똑같이
+    적용하면 된다!! html에서 icon만 바꾸면 돼!! */
