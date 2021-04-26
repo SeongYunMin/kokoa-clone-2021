@@ -41,15 +41,19 @@
           <!-- 아이콘 가져오고 클래스명 뒤에 fa-2x 붙이면 더 큰 아이콘 불러올 수 있다 -->
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></a>
+          <a class="nav__link" href="#">
+            <span class="nav__notification">1</span>
+            <i class="far fa-comment fa-2x"></i>
+          </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><i class="fas fa-ellipsis-h fa-2x"></i
-          ></a>
+          <a class="nav__link" href="#">
+            <div class="nav__notification--small"></div>
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+          </a>
         </li>
         <!-- 점 세개가 나란히 있는것(...)을 ellipsis라고 부른다 -->
         <!-- https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
@@ -57,7 +61,15 @@
         아이콘의 사이즈는 이렇게 사이트에서 알려주는 방법으로 밖에 바꿀 수 없다-->
       </ul>
     </nav>
-
+    <!-- screen header를 만들어보자 얘는 이후 만들 화면에서도 쓸 수 있을듯 -->
+    <header class="screen-header">
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+      </div>
+    </header>
     <script
       src="https://kit.fontawesome.com/207aabff9e.js"
       crossorigin="anonymous"

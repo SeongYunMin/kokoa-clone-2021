@@ -10,15 +10,17 @@
 @import "components/status-bar.css";
 /* status bar 스타일시트는 status-bar.css에 저장해 놨다 거기서 import 해왔다 
 거기로 가서 status-bar 만드는 법 배워보삼 */
+@import "components/nav_bar.css";
+@import "components/screen_header.css";
 
-/* <Screens> */
 @import "screens/login.css";
 /* 로그인 창은 요 파일에서 import해 왔다 참고! */
-@import "components/nav_bar.css";
+@import "screens/friends.css";
 
 /* import를 할 때 중요한 것은 css는 캐스캐이딩하게 코드를 읽으므로
     font,reset,variable등 모든 css시트에서 범용적으로 쓰일 코드들을
     앞에 배치해야 한다 그래야 정상적으로 속성이 먹여진다 */
+
 
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
