@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 4</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: tomato;
+        position: static;
+        /* position에서 디폴트값은 static이다
+        이는 레이아웃이 박스를 그냥 처음 위치에 두는 것을 의미 */
+      }
+      .green {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: -10px;
+        left: 20px;
+        /* div 안에 초록색 green div를 넣었다
+        position: relative 와 top,bottom,left, right를 사용하면 
+        부모 엘레먼트인 토마토색 div를 기준으로 주어진 값만큼 움직이게 된다
+        -10px면 지금위치에서 토마토 div 기준으로 벽쪽으로 10px만큼 다가가고
+        20px면 토마토 div 기준으로 벽에서 지금보다 20px만큼 멀어진다 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="green"></div>
+    </div>
+  </body>
+</html>

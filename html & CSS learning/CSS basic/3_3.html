@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 2</title>
+    <style>
+      /*blocks and Inlines  */
+      div {
+        height: 150px;
+        width: 150px;
+        background-color: tomato;
+        /* 이 selector는 아래 3개의 div 모두를 가리키게 된다 */
+        /* 컴파일 시 토마토색 박스 3개가 생긴다. 근데 박스 옆에는 어떤것도 올 수 없다 */
+      }
+      span {
+        background-color: turquoise;
+      }
+      a {
+        background-color: teal;
+      }
+      p {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- 컴파일 해보면 박스 옆에는 어떤것도 올 수 없음을 알 수 있다 -->
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <!-- 반면 span의 경우 옆으로 연속해서 출력된다 -->
+    <a href="https://www.naver.com">link</a>
+    <!-- 링크도 span처럼 옆에 다른 게 올 수 있다 -->
+    <!-- 즉 span이나 a는 박스가 아니다 -->
+    <p>Hi My name is Min</p>
+    <!-- p의 경우 옆에 아무것도 올 수 없다 즉 얘는 박스이다 -->
+    <span>hello</span>
+    <span>hello</span>
+    <img
+      src="https://image.chosun.com/sitedata/image/202103/31/2021033100895_0.jpg"
+    />
+    <!-- 아하 img 태그는 옆에 hello가 다닥다닥 붙는걸로 봐서 옆에 다른게 와도 된다 즉 박스 아니다 -->
+    <span>hello</span>
+    <code>hello</code>
+    <span>hello</span>
+    <!-- 즉 div, p 등은 옆에 다른 요소가 못 오는 블락(Block) 이고 
+    span, a, img, code 등은 옆에 요소가 올 수 있는 인라인(inline)이다  
+    인라인에는 작은 글, 링크, 그림 등이 있다-->
+
+    <!-- 대부분은 블락이고 인라인을 외우자 span, a, imageㅠ 정도가 있다 -->
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 일단 LoginSreen.html의 코드를 다 가져오자 거기서 필요한 것만 남기고 나머지를 제거하자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>10%</span>
+        <i class="fas fa-battery-quarter fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <!-- 12열부터는 status-bar 코드인데 > 이거 눌러서 숨겼다 -->
+
+    <!-- freinds 페이지 하단에 있는 navigation bar 만들어보자 -->
+    <!-- 아래의 html코드를 다 직접 쓰기 귀찮으므로 vsc에서 제공하는 <단축키> 쓰자
+    nav>ul>li*4>a
+    이렇게 어떤 엘레먼트 안에 뭐가 있는지를 >를 사용해서 쓰고 엘레먼트의 갯수는 *로
+    정할 수 있다 이렇게 하고 엔터 누르면 아래와 같은 코드가 자동으로 작성된다 
+    엔터를 친 후 아무것도 만지지 말고 그냥 키보드 커서가 깜빡이고 있는 곳에 하이퍼
+    링크 주소를 입력해봐라 그리고 tab을 누르면 바로 옆 텍스트 입력칸으로 넘어간다
+    그리고 또 tab누르면 그 아래 리스트의 하이퍼링크 입력칸으로 넘어간다 이 기능은
+    매우 유용하므로 잘 써먹어보자-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="fas fa-user fa-2x"></i></a>
+          <!-- 아이콘 가져오고 클래스명 뒤에 fa-2x 붙이면 더 큰 아이콘 불러올 수 있다 -->
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"
+            ><i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+        </li>
+        <!-- 점 세개가 나란히 있는것(...)을 ellipsis라고 부른다 -->
+        <!-- https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
+        이 폰트어썸 페이지를 통해 아이콘 사이즈를 변경하는 코드를 알 수 있다 
+        아이콘의 사이즈는 이렇게 사이트에서 알려주는 방법으로 밖에 바꿀 수 없다-->
+      </ul>
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/207aabff9e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

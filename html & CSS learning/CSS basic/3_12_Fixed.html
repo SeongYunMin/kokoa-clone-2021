@@ -1,0 +1,52 @@
+<!-- position은 레이아웃에 변화를 주는 것이 아니라
+    엘레먼트를 조금조금 움직이게 해주는 것을 말한다-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 4</title>
+    <style>
+      body {
+        height: 1000vh;
+        /* 스크린 사이즈를 매우 키워서 스크롤이 가능하도록 해보겠다 1000vh
+          (보이는 화면의 1000%로 바디사이즈를 키웠다는 의미) */
+        margin: 20px;
+      }
+      div {
+        /* position: fixed; (추가적인 코딩을 해야해서 주석처리했다 */
+        /* 이 포지션이란 기능은 브라우저를 스크롤해도 계속 같은 위치에
+            박스가 머물게 하는 기능이다 그 보통의 사이트에서 맨위로 올라가게
+             하는 버튼이 이렇게 스크린 한쪽 귀퉁이에 고정돼있지 않았는가?
+             그런거다*/
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+      }
+      #different {
+        position: fixed;
+        /* 이렇게만 하게되면 이 different 디브는 초록 디브 아래에 fixed 되게 된다
+        그렇다면 초록 div와 겹쳐진채로 화면상에 fixed 될려면 어떻게 해야할까? */
+        top: 5px;
+        left: 200px;
+        /* 이렇게 top,left, right, bottom 의 속성을 사용하면 된다
+        위 끝으로부터 5px, 옆끝으로부터 10px 떨어진 위치에
+        different 디브 위치하게 된다
+        이렇게 하면 different 디브가 초록 디브 위에 겹치게 둘 수 있다
+        원래는 서로다른 디브의 경우 겹쳐지는 것은 물론 무조건 바로 아래에
+        딱 붙어서 표현되어야 하는데 얘는 어떻게 이럴 수 있을까?
+        바로 두 디브가 서로 다른 레이어(층)에 있기 때문에 겹쳐지는게 가능하다!
+        top,left, right, bottom 속성 중 하나만 써도 다른 이 디브는 다른 디브와는
+        다른 레이어에 위치하게 된다 */
+        background-color: tomato;
+        width: 350px;
+        opacity: 0.4;
+        /* opacity속성은 선명도를 의미한다 1이 100%이고 0이 0%이다 */
+        /* position: fixed; 와 top left bottom 등에 의해 두 디브는 다른 레이어에
+        있음을 알았다!! */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div id="different"></div>
+  </body>
+</html>

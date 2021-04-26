@@ -1,0 +1,62 @@
+<!-- PseudoSelector는 좀더 세부적으로 엘레먼트를 선택할 수 있게 해주는 것이다 
+지금까지 배운건 그냥 태그를 쓰거나 class, id를 쓰는 방법이다-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 4</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        background-color: tomato;
+      }
+      .even:nth-child(2) {
+        background-color: teal;
+      }
+      /* 이렇게 n번째 span을 지정해서 선택할 있는 nth-child도 있다 */
+      .even:nth-child(even) {
+        background-color: turquoise;
+      }
+      /* 이렇게 nth-child()에 even을 넣으면 짝수번째 span을 전부 셀렉트
+      하게 된다 매우 유용! odd도 물론 넣을 수 있다*/
+      .n:nth-child(3n + 1) {
+        background-color: blueviolet;
+      }
+      /* 이렇게 nth-child속성안에 3n+1과 같이 n을 넣으면 컴퓨터는 n에
+        0부터 디른 모든 숫자를 대입한다! */
+    </style>
+  </head>
+  <body>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <span class="even">hello</span>
+    <div></div>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+    <span class="n">hello</span>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  height: 1000vh;
+}
+.nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  /* navigation bar는 스크롤을 해도 화면 하단에 그댈대로 있어야 한다
+    따라서 position속성을 fixed로 줘서 가만히 있게 하고 bottom 0px로
+    창의 맨 아래에 위치하게 했다 이것만 하면 nav 박스의 width이 사라져
+    버린다. 따라서 width에 100%를 먹여주면 끝!! 인줄 알았는데 이렇게 하면
+    ellipsis icon이 사라진다 WHY?? 패딩이 좌우로 50씩 있기 때문
+    이거는 바로 아래에서 배울 속성을 통해 해결 가능하다 */
+  background-color: #f9f9fa;
+  padding: 18px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+/*  이렇게 해서 navigation bar의 아이콘들 나란히 있게 하자 */
+/*
+.nav__link{
+    color: inherit;
+    text-decoration: none;
+}
+이렇게 nav__link의 디폴트 값을 없앨 수 있지만 이 속성은 모든 링크에 다 적용되므로
+reset.css에 가서 아얘 a에다가 디폴트값을 다 없애는 속성을 먹여버리자 */
+.nav__link {
+  color: #2f363e;
+}

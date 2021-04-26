@@ -1,0 +1,40 @@
+<!-- PseudoSelector는 좀더 세부적으로 엘레먼트를 선택할 수 있게 해주는 것이다 
+지금까지 배운건 셀렉터에 그냥 태그를 쓰거나 class, id를 쓰는 방법이다-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 4</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        position: relative;
+      }
+      div:last-child {
+        background-color: teal;
+        /* 이렇게 div: 형식으로 수도 셀렉터를 지정할 수 있는데
+        이렇게 하면 아래 있는 많은 div 중 마지막인 div가 정확히 셀렉트 된다
+        last-child 는 리스트에 있는 디브 중 마지막 친구를 의미한다
+        first-child는  리스트에있는 디브 중  첫번째 친구를 의미한다*/
+      }
+      div:first-child {
+        background-color: tomato;
+      }
+      /* 이렇게 하는게 class나 id를 만드는 것보다 훨씬훨씬 좋은 방법이다
+      우린 심지어 html코드는 건들지도 않았다 */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- 이 5개의 div중 마지막 디브만 다른 배경색을 가지도록 해보자 -->
+  </body>
+</html>

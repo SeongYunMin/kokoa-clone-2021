@@ -1,0 +1,61 @@
+<!-- 똑같은 태그, 여기선 div가 많을 때는 id를 부여해서 
+    정확하게 디렉팅 가능하게 한다 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 3</title>
+    <style>
+      html {
+        background-color: tomato;
+      }
+      body {
+        margin: 20px;
+        padding: 20px 10px;
+        /* 이렇게 적용하면 경계에 딱 붙어있던 
+        div 박스를 상하 20 좌우 10만큼 안으로 밀어넣는다 */
+        background-color: turquoise;
+      }
+      div {
+        padding: 10px;
+        /* 태그를 가리키는 방법은 두가지가 있다
+        1. 태그 자체, 여기선 div를 가리키기
+        2. id 자체를 가리키기 */
+        /* 이 패딩을 주석처리하고 실행시켜보면 박스안에 박스가 왼쪽 위에 바짝
+        붙어서 생긴다. 이때 padding을 10px씩 모든 div에 주게 되면 왼쪽 변과
+        오른쪽 변이 20씩 안쪽으로 밀게 되어 왼쪽과 오른쪽 간격만 10px로 일정
+        하게 된다. */
+      }
+      #first {
+        background-color: whitesmoke;
+        width: 150px;
+        height: 150px;
+        /* 이렇게 # 뒤에 id 값을 넣어주면 바로 그 div를 정확히 디렉팅 한다! */
+      }
+      #second {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+      #third {
+        background-color: wheat;
+        width: 50px;
+        height: 50px;
+      }
+      #fourth {
+        background-color: green;
+        width: 25px;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <div id="fourth"></div>
+          <!-- id는 그냥 html의 어트리븉 넣는 것과 같은 방법으로 입력하면 된다!  -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

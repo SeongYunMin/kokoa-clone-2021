@@ -1,0 +1,46 @@
+<!-- CSS와 html을 한 시트에 코딩해보자~! -->
+<html>
+  <head>
+    <title>The Seoul Times</title>
+    <!--<link href="styles.css" rel="stylesheet" />-->
+    <!-- html에 css 추가하는 법 1: 
+            폴더에 .css파일을 하나 만들고 link 태그를 통해 이 둘을 
+            연결한다 href 어트리븃으로 파일 파일 위치 입력하고 rel
+            (relation) 어트리븃으로 불러오는 css 파일이 stylesheet임을 
+            입력하면 된다 -->
+    <!-- 이렇게 css파일에서 가져와서 쓰는것을  external CSS 라고 한다  현재는 body를 select해서 배경색을 주고 있다-->
+    <style>
+      /* html에 css 추가하는 법 2:
+        css를 돌리기 위해선 이 헤드 태그 안에 style 태그를 넣으면 된다
+        여기에 CSS 코드를 작성하면 된다 */
+      /* 이렇게 html코드 안에서 css 다루는 것을 inline CSS라고 한다 */
+      h1 {
+        color: blueviolet; /*이런식으로 속성: 속성값; 형태로 작성하는게 css의 룰*/
+        font-size: 100px; /*속성은 뛰어쓰기, _, / 를 쓰면 안된다 또한 값을 잘못 입력했다고 css는 에러가 나진 않는다 단지 적용이 안될뿐*/
+        text-decoration: underline;
+        font-weight: 600;
+        font-style: italic;
+        /* 이렇게 다양한 속성을 조작할 수 있다 */
+        /* cascading 은 계단식이라는 뜻이다. 즉 CSS는 위에서 아래로 순차적으로 
+        코드를 읽어나간다. 따라서 지금 styles.css 파일에서는 h1을 토마토색으로 
+        가리켰지만 계단식으로 읽어나가므로 그보다 아래에 적힌 18행의 보라색 이 실행되는것 */
+      }
+      address {
+        text-align: left;
+        color: crimson;
+      }
+      body {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Seoul Times</h1>
+    </header>
+    <main>
+      <address>서울시 송파구 오금로 32길 10</address>
+    </main>
+    <footer>2020 S. Y</footer>
+  </body>
+</html>

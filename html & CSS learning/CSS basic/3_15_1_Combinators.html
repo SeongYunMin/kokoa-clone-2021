@@ -1,0 +1,49 @@
+<!-- directing을 편하게 해주는 Combinator에 대해 알아보자 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 50;
+      }
+      span {
+        color: black;
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+        /* 3. 위 3개의 속성은 span 과 p 안의 span에 동시 적용된다
+            그렇다면 div의 바로 밑 자식(direct children)에서만 
+            span을 찾아 그 엘레먼트에게만 속성을 줄 수 있는 방법이 있을까?  */
+      }
+      p span {
+        color: white;
+      }
+      /* 2. (아래 각주부터 읽고 오라)
+        이렇게 p라는 부모 엘레먼트 안에 있는 span을 조작하고 싶으면
+        셀렉터 이름을 p span 이런식으로 쓰면 된다 부모 자식 순으로 쓰면 됨
+        이름을 div p span 이렇게 부모를 나열해서 작성해도 괜찮다 */
+      div > span {
+        text-decoration: underline blue;
+      }
+      /* 4. 이렇게 parent > children 형식으로 셀렉터를 지정해주면
+             parent의 direct children 에게만 즉 div의 direct children인 
+             span에게 속성을 먹일 수 있다 */
+      p + span {
+        text-decoration: wavy underline red;
+      }
+      /* 5. 이렇게 +를 사용하면 p 와 형제인, 즉 p 바로 다음에 오는 span에게
+            속성을 먹일 수 있다. 바로 다음이어야 한다 컴파일해서 확인해보자 */
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah
+        <span>inside</span>
+        <!-- 1. div 안에 p, span 넣었고 p 안에 span 넣었다
+        p안의 span 만 css로 조작하고 싶다 어떻게 할까?  위 각주 참고하라-->
+      </p>
+      <span>hello</span>
+    </div>
+  </body>
+</html>

@@ -128,8 +128,15 @@ table {
   border-spacing: 0;
 }
 
-input{
+input {
   outline: none;
 }
 /* 이 input에 줄 속성을 여기다 써서 앞으로 모든 input을 focus 할때
   거슬리는 outline 생기지 않도록 할 수 있다*/
+a {
+  color: inherit;
+  /* 컬러의 디폴트값을 없앴다 */
+  text-decoration: none;
+  /* 링크 아래에 있는 밑줄을 없앴다 */
+}
+/* 여기서 a, 즉 링크의 디폴트 값들을 다 제거해 주자 */
