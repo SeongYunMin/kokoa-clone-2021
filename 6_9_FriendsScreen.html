@@ -41,9 +41,9 @@
           <!-- 아이콘 가져오고 클래스명 뒤에 fa-2x 붙이면 더 큰 아이콘 불러올 수 있다 -->
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#">
+          <a class="nav__link" href="6_19_ChatsScreen.html">
             <i class="far fa-comment fa-2x">
-              <span class="nav__notification">1</span>
+              <span class="nav__notification badge">1</span>
             </i>
           </a>
         </li>
@@ -84,14 +84,14 @@
        사용될 부분이다 따라서 따로 component폴더에 css파일을 만들 것이다 -->
 
     <main class="friends-screen">
-      <div class="user-component border-underline">
+      <div class="user-component friends-border__underline">
         <div class="user-component__column">
           <img
             class="user-component__avatar user-component__avatar--xl"
             src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Alberto_conversi_profile_pic.jpg"
           />
           <div href="#" class="user-component__text">
-            <h3 class="user-component__name">SeongYun</h3>
+            <h1 class="user-component__name">SeongYun</h1>
             <!-- <h6 class="user-component__subtitle">this text whatever</h6> -->
           </div>
         </div>
@@ -112,11 +112,13 @@
       <div class="user-component">
         <div class="user-component__column">
           <img
-            class="user-component__avatar"
+            class="user-component__avatar user-component__avatar--sm"
             src="https://new-version.download/wp-content/uploads/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-PC%EB%B2%84%EC%A0%84.png"
           />
           <div href="#" class="user-component__text">
-            <h3 class="user-component__name">Channel</h3>
+            <h3 class="user-component__name user-component__name--normal">
+              Channel
+            </h3>
           </div>
         </div>
         <div class="user-component__column user-component__column--rightend">

@@ -51,17 +51,10 @@ reset.css에 가서 아얘 a에다가 디폴트값을 다 없애는 속성을 �
   position: relative;
 }
 .nav__notification {
-  background-color: #ff6229;
   display: flex;
   /* 이렇게 flex box로 만들면 인라인인 span이 block이 된다 */
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-weight: 400;
-  font-size: 20px;
   position: absolute;
   left: 18px;
   bottom: 18px;
@@ -70,6 +63,7 @@ reset.css에 가서 아얘 a에다가 디폴트값을 다 없애는 속성을 �
     의 포지션을 relative로 설정하여 창 크기 변해도 알림은 메시지 아이콘 위에 항상
     머물도록 짜보자*/
 }
+
 .nav__notification--small {
   width: 8px;
   height: 8px;
