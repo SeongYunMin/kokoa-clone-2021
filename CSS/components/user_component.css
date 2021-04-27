@@ -1,20 +1,62 @@
-.user-component__column:first-child {
+.user-component,
+.user-component__column {
   display: flex;
-  margin: 0px 20px;
-}
-.user-component__avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 35%;
-  margin-right: 20px;
-}
-.user-component__text {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 39%;
+  margin-right: 20px;
+}
+
 .user-component__name {
   color: #191919;
   font-size: 18px;
   font-weight: 600;
+}
+.border-line {
+  margin-bottom: 20px;
+  color: 1px solid black;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+.border-underline {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.friends-screen__channel {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.friends-screen__channel span {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.user-component {
+  justify-content: space-between;
+}
+.user-component__column--rightend {
+  width: 25px;
+  justify-content: space-between;
+}
+.user-component__column--rightend span {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
 }

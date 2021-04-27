@@ -80,26 +80,51 @@
         <!-- chevron은 >를 의미 -->
       </a>
     </div>
+    <!-- friend-names__display 아래에 나오는 부분은 다른 페이지에서도
+       사용될 부분이다 따라서 따로 component폴더에 css파일을 만들 것이다 -->
 
-    <div class="user-component">
-      <!-- friend-names__display 아래에 나오는 부분은 다른 페이지에서도
-          사용될 부분이다 따라서 따로 component폴더에 css파일을 만들 것이다 -->
-      <div class="user-component__column">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Alberto_conversi_profile_pic.jpg"
-          class="user-component__avatar"
-        />
-        <div class="user-component__text">
-          <h4 class="user-component__name">SeongYun</h4>
+    <main class="friends-screen">
+      <div class="user-component border-underline">
+        <div class="user-component__column">
+          <img
+            class="user-component__avatar user-component__avatar--xl"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Alberto_conversi_profile_pic.jpg"
+          />
+          <div href="#" class="user-component__text">
+            <h3 class="user-component__name">SeongYun</h3>
+            <!-- <h6 class="user-component__subtitle">this text whatever</h6> -->
+          </div>
+        </div>
+        <!-- 프로필 사진과 이름이 들어갈 두개의 블락을 user-component__column
+            이라는 블락 안에다가 만들었다 
+          이렇게 만든 위의 코드는 사실 3번째 chat 페이지의 컴포넌트를 만든것
+          여기서 조금씩 수정을 해서 friends 창의 것도 만들어볼 것이다 -->
+
+        <div class="user-component__column"></div>
+        <!-- 이 칼럼은 오른쪽에 따로 누를 수 있는 버튼 있을 때(Channel 박스 오른쪽
+              끝 버튼같은거)쓸 블락들이다 나중에 쓸 것이므로 일단 비워둠  -->
+      </div>
+      <div class="friends-screen__channel">
+        <span>Channel</span>
+        <span><i class="fas fa-chevron-up"></i></span>
+      </div>
+
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            class="user-component__avatar"
+            src="https://new-version.download/wp-content/uploads/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-PC%EB%B2%84%EC%A0%84.png"
+          />
+          <div href="#" class="user-component__text">
+            <h3 class="user-component__name">Channel</h3>
+          </div>
+        </div>
+        <div class="user-component__column user-component__column--rightend">
+          <span>2</span>
+          <span><i class="fas fa-chevron-right"></i></span>
         </div>
       </div>
-      <!-- 프로필 사진과 이름이 들어갈 두개의 블락을 user-component__column
-          이라는 블락 안에다가 만들었다  -->
-
-      <div class="user-component__column"></div>
-      <!-- 이 칼럼은 오른쪽에 따로 누를 수 있는 버튼 있을 때(Channel 박스 오른쪽
-            끝 버튼같은거)쓸 블락들이다 일단 비워둠  -->
-    </div>
+    </main>
 
     <script
       src="https://kit.fontawesome.com/207aabff9e.js"
