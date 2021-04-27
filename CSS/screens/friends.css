@@ -16,7 +16,8 @@
 }
 .chats-screen,
 .friends-screen {
-  padding: 0px var(--horizontal-space);
+  /* padding: 0px var(--horizontal-space); */
+  /* 모든 페이지의 main에 적용되므로 styles.css에서 main에 속성을 먹이면 간편하다 */
 }
 .friends-screen__channel {
   height: 35px;
