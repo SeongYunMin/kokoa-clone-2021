@@ -1,0 +1,9 @@
+.fa-info-circle {
+  color: tomato;
+}
+.more-icon__size {
+  width: 80px;
+  height: 60px;
+  justify-content: space-between;
+}
+/* 사이즈를 이렇게 똑같이 만들어야 space-between 해도 간격 일정하다 */

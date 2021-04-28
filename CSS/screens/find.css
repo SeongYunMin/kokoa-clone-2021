@@ -62,7 +62,7 @@
   justify-content: space-between;
   padding: 10px 0px;
 }
-.open-char__bar-blurtext {
+.open-chat__bar-blurtext {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -84,6 +84,10 @@
 }
 .open-chat__bar--text > span:nth-child(2) {
   font-size: 16px;
+  text-transform: uppercase;
+  /*  이렇게 하면 해쉬태그에 있는 소문자를 대문자로 바꿀 수 있다
+      이렇게 하는 이유는 대문자는 디자인 문자이기 때문
+      따라서 CSS를 통해 꾸며주는 것 */
   color: rgba(0, 0, 0, 0.7);
 }
 .open-chat__bar--text > span:last-child {
@@ -98,4 +102,26 @@
   width: 27px;
   height: 27px;
   border-radius: 50%;
+}
+.open-chat__bar--text-active {
+  color: tomato;
+}
+.open-char__heartbox {
+  position: relative;
+}
+.open-char__heartbox div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 9px;
+  left: 40px;
+  width: 52px;
+  height: 22px;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  border-radius: 10px;
 }

@@ -67,3 +67,7 @@
   height: 25px;
   border-radius: 50%;
 }
+
+.user-component__more {
+  justify-content: center;
+}
