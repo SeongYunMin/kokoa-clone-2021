@@ -1,0 +1,20 @@
+.settings-header{
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.settings-header h1{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+.settings-header div{
+    font-size: 12px;
+}
+
+.settings-list__column{
+    display: flex;
+    justify-content: space-between;
+}
+
