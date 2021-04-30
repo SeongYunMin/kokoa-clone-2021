@@ -1,0 +1,22 @@
+.settings-header {
+  margin: 40px 0px 20px 0px;
+  display: flex;
+}
+.settings-header__column {
+  width: 33.3%;
+}
+.settings-header__column:nth-child(2) {
+  justify-content: center;
+}
+.settings-header__column:last-child {
+  justify-content: flex-end;
+}
+.settings-header h1 {
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+.settings-header div {
+  font-size: 12px;
+}

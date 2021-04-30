@@ -7,12 +7,12 @@
 @import "components/reset.css";
 @import "components/variables.css";
 /* 변수 쓰고싶으면 이렇게 import를 해줘야 한다 */
-@import "components/status-bar.css";
+
 /* status bar 스타일시트는 status-bar.css에 저장해 놨다 거기서 import 해왔다 
 거기로 가서 status-bar 만드는 법 배워보삼 */
 @import "components/nav_bar.css";
 @import "components/screen_header.css";
-
+@import "components/status-bar.css";
 @import "screens/login.css";
 /* 로그인 창은 요 파일에서 import해 왔다 참고! */
 @import "screens/friends.css";
@@ -22,9 +22,11 @@
     앞에 배치해야 한다 그래야 정상적으로 속성이 먹여진다 */
 @import "components/user_component.css";
 @import "components/badge.css";
+@import "components/alt_screen_header.css";
 @import "screens/find.css";
 @import "screens/more.css";
 @import "screens/settings.css";
+@import "screens/chat.css";
 
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -35,9 +37,13 @@ body {
       그럼 거기서 원하는 거 찾고 Select Font 누르면 css에 첨부하는 법 나옴
       그리고 대부분의 font의 경우 굴기등의 style을 고를 수 있는데 다 고르지 말고
       쓸 것들만 골라서 가져오는게 로딩 시간을 줄일 수 있는 방법이다*/
+  height: 1000vh;
   font-family: "Open Sans", sans-serif;
   /* 3. 이렇게 구글 폰트 사이트에 있는 font-family를 복붙해서 가져오자 */
 }
+/* body::-webkit-scrollbar {
+  display: none;
+} */
 main {
-  padding: 0px var(--horizontal-space);
+  margin: 0px var(--horizontal-space);
 }

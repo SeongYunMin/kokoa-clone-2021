@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
 }
+.user-component {
+  margin-bottom: 20px;
+}
 .user-component__avatar {
   width: 70px;
   height: 70px;
@@ -66,8 +69,4 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-}
-
-.user-component__more {
-  justify-content: center;
 }
