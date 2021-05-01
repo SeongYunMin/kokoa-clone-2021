@@ -6,6 +6,7 @@
 /* <Components> */
 @import "components/reset.css";
 @import "components/variables.css";
+@import "components/no-mobile.css";
 /* 변수 쓰고싶으면 이렇게 import를 해줘야 한다 */
 
 /* status bar 스타일시트는 status-bar.css에 저장해 놨다 거기서 import 해왔다 
@@ -41,9 +42,9 @@ body {
   font-family: "Open Sans", sans-serif;
   /* 3. 이렇게 구글 폰트 사이트에 있는 font-family를 복붙해서 가져오자 */
 }
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 main {
   margin: 0px var(--horizontal-space);
 }

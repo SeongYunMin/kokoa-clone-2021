@@ -34,3 +34,38 @@
   font-size: 13px;
   color: rgba(0, 0, 0, 0.4);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* 2. 이 visibility 속성을 쓰면 이 화면이 투명해진 후에 클릭도 가능해진다
+        하지만 이것이 이 엘레먼트가 사라진 것을 의미하진 않는다
+        단지 클릭만 가능해진 것.
+        이 엘레먼트를 완전히 사라지게 하기 위해선 웹 개발의 뇌와 같은 
+        자바스크립트가 필요하다 */
+  }
+}
+
+#splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  font-size: 120px;
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  /* 1.forwards를 쓰면 애니메이션이 끝나도 처음으로 돌아가지 않고 멈추게 된다 
+    하지만 얘도 단지 마지막 속성인 상태로 애니메이션이 끝날 뿐이지 이 엘레먼트
+    가 사라진 것은 아니다 따라서 클릭이 안된다
+    forwards 속성은 엄밀히 말하면 @keyframes의 마지막 속성을 계속 유지시키는 
+    역할을 한다*/
+  animation-delay: 0.7s;
+  /* 이 속성은 애니메이션이 시작되는 순간을 딜레이 시킬 수 있다 */
+}

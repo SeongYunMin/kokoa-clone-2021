@@ -84,16 +84,159 @@
   font-size: 12px;
   opacity: 0.7;
 }
-.message-input{
+.message-input {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.message-input__bubble{
+.message-input__bubble {
   margin-top: 20px;
-  background-color: #FEE500;
+  background-color: #fee500;
   padding: 8px 13px;
   font-size: 16px;
   border-radius: 15px;
   border-top-right-radius: 0px;
+}
+.layer1 {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0px;
+  height: 320px;
+  background-color: white;
+}
+
+@keyframes MoveFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MoveFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.message-row {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: MoveFromLeft 1.5s ease-in-out forwards;
+}
+.message-input {
+  transform: translateX(100px);
+  opacity: 0;
+  animation: MoveFromRight 1.5s ease-in-out forwards;
+  animation-delay: 0.75s;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 8px 22px 8px 5px;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.reply__column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reply__column:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.reply__column:first-child span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
+  border-radius: 9px;
+  font-size: 32px;
+}
+.reply__input {
+  border: none;
+  width: 280px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.reply__input::placeholder {
+  font-size: 14;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.reply__column:last-child {
+  width: 90%;
+  height: 40px;
+  padding: 0px 3px 0px 10px;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.fa-smile {
+  position: absolute;
+  right: 70px;
+  bottom: 15px;
+  font-size: 26px;
+  color: #9b9fa6;
+}
+.reply__enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #fee500;
+}
+.fa-arrow-up {
+  font-size: 20px;
+  color: #191919;
+}
+
+.reply:focus-within .fa-smile,
+.reply:focus-within .reply__enter,
+.reply:focus-within .reply__column:first-child {
+  /* focus-within이라는 수도셀렉터는 "만약 이 엘레먼트 안에 focus된 엘레먼트가 있다면"
+    이라는 조건을 부여한다 따라서 위 명령은 만약 .reply엘레먼트 안에 포커스 된 엘레먼트가
+    있다면 .reply__column:first-child 얘한테 속성을 먹이라는 명령이다 */
+  opacity: 0;
+}
+
+.reply:focus-within .reply__column:last-child {
+  width: 100%;
+  transform: translateX(-1%);
+  justify-content: center;
+}
+.reply:focus-within .reply__input {
+  width: 100%;
+}
+
+.fa-smile,
+.reply__enter,
+.reply__column:first-child {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.reply:focus-within .reply__input {
+  width: 98%;
+  transform: translateX(-13%);
 }

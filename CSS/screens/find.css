@@ -125,3 +125,26 @@
   font-size: 12px;
   border-radius: 10px;
 }
+
+@keyframes HeartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    color: red;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: scale(1);
+  }
+}
+
+.open-char__heartbox .fa-heart {
+  will-change: transform;
+  /* 이 will-change: transform; 속성을 먹이면 브라우저는 곧 뭔가가 변할 것이라는
+  것을 인지한다. 여기선 transform 속성이 변할 거라는 것을 브라우저로 하여금 인지
+  하게 한다. 이 속성은 브라우저의 연산을 도와주는 속성이다 
+  즉 이 속성을 쓰면 브라우저는 그래픽카드를 써서 애니메이션을 가속화한다*/
+  animation: HeartBeat 1s ease-in-out infinite;
+}
