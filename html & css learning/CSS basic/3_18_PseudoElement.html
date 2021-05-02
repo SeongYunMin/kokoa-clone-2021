@@ -1,0 +1,41 @@
+<!-- 3개의 수도 엘레먼트에 대해 알아보자  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input {
+        border: 1px solid teal;
+      }
+
+      input::placeholder {
+        color: tomato;
+      }
+      /* 이렇게 ::placeholder 같은 수도엘레먼트 사용하게 되면
+        placeholder 자체에 속성을 먹일 수 있다  */
+      p::selection {
+        color: white;
+        background-color: yellowgreen;
+      }
+      /* ::selection은 커서로 글자들을 셀렉트 할때 속성을 먹일 수 있게 해준다 */
+      p::first-letter {
+        font-size: 100px;
+        background-color: yellow;
+        color: tomato;
+      }
+      /* 이 수도 엘레먼트는 first-letter에만 속성을 먹인다 */
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <input type="text" placeholder="username" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. optio
+          ducimus, molestias voluptas perferendis corporis dicta, aliquid nemo
+          nesciunt ipsam obcaecati blanditiis a dignissimos aliquam
+          reprehenderit.
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!-- Margin에 대해 알아보자 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 2</title>
+    <style>
+      html {
+        background-color: tomato;
+      }
+      body {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        /* 마진을 0으로 해서 브라우저가 디폴트로 정한 마진을 없애버릴 수도 있다 */
+        /* margin-left 등을 이용해서 원하는 만큼 마진을 줄 수도 있다(이때는 기본 
+        마진값 8pt 지워진다) */
+
+        background-color: turquoise;
+        /* 이 셀렉터는 바디 태그를 가리키고 있다 이는 div가 차지하는 공간까지만을 칠하게 된다 */
+      }
+      div {
+        margin-left: 50px;
+        /* div에게 마진을 줬다 이렇게 하면 div로 만든 블락을 오른쪽으로 이동 가능 */
+        width: 150px;
+        height: 150px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+<!-- 이렇게 실행을 하면 사실 왼쪽 위에 딱 붙어야 정상인데 사실 
+    조금 간격을 두고 떨어져있다 Why>
+    브라우저가 기본적으로 실행시킨 스타일시트가 있었기 때문!
+    브라우저에서 검사를 돌리면 user agent stylesheet 창이 있는데 거기보면
+    margin: 8px; 라고 돼있다. 
+    margin은 box의 3가지 속성인 margin, border, padding 중 하나이다
+    margin은 box의 border 바깥에 있는 공간을 의미! 이것은 브라우저에 의해 
+    디폴트로 정해진다 -->

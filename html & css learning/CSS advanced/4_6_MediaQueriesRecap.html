@@ -1,0 +1,51 @@
+<!-- Media Query 에 대해 알아보자
+CSS만을 이용해서 스크린의 사이즈를 알 수 있는 방법이다
+즉 우리가 컴퓨터로 볼때, 스마트폰으로 세로로 볼때, 가로로 볼때
+다 responsive하게 표현하고 싶을 때 필요하다 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 6</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (min-device-width: 601px) and (max-device-width: 1200px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      /* min-device-width 는 device 즉 스마트폰만 인식할 수 있는 미디어 커리 이다 */
+      /* 이렇게 조건문 형식의 미디아 커리를 만들고 그안에  밖과 똑같은
+        CSS 코드를 짤 수 있다 즉 엘레먼트를 먼저 쓰고 그안에 속성을 넣어야 한다
+        미디아 커리는 and 라는 연산자로 연결된다*/
+      @media screen and (orientation: landscape) {
+        span {
+          display: none;
+        }
+      }
+      /* 더 많은 종류의 미디어 커리는 media queries mdn을 검색해서 찾아볼 수 있다 */
+      @media print {
+        body {
+          background-color: chartreuse;
+        }
+      }
+      /* screen 말고 print라는 엘레먼트를 쓰면 프린트기로 프린트 할때만 보여주고 싶은
+      화면을 CSS코드로 짤 수 있게 된다 */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>Please flip your phone</span>
+  </body>
+</html>

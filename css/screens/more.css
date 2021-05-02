@@ -1,0 +1,48 @@
+.fa-info-circle {
+  color: tomato;
+}
+.change-to-more {
+  margin-top: 50px;
+}
+.more-icon__size {
+  width: 80px;
+  height: 60px;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* 사이즈를 이렇게 똑같이 만들어야 space-between 해도 간격 일정하다 */
+.suggestions-bar__title {
+  padding: 20px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.suggestions-bar__btn {
+  display: flex;
+  justify-content: space-between;
+}
+.suggestions-bar__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+  height: 70px;
+}
+.suggestions-bar__contents img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+.suggestions-bar__contents span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.find-bar__column,
+.suggestions-bar__contents {
+  flex-wrap: wrap;
+}
+.settings-list__column {
+  display: flex;
+  align-items: center;
+}

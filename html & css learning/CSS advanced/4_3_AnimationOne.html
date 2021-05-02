@@ -1,0 +1,45 @@
+<!-- 4_2에서 hover 상태일때 애니메이션 동작하는 법 배웠다
+그렇다면 그냥 디폴트로 계속 애니메이션 재생되게 하는 방법은? -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @keyframes CoinFlip {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(180deg) translateX(-300px);
+        }
+      }
+      /* 3. 위와 같이 translateX를 to 속성에 먹여서 애니메이션이
+                수평으로도 움직이게 할 수 있다. 근데 얘는 살짝 아쉽다
+                왜냐면 infinite으로 돌려도 화면상에서 처음시작과 끝의 
+                엘레멘트 위치가 달라서 매끄러운 애니메이션 어렵다
+                이것은 다음 장에서 보완해보도록 하겠다 */
+
+      /* 1. 우선 애니메이션이 동작하려면 @keyframes 라는 엘레먼트를 써야한다
+            위와 같이 from, to 속성을 써서 전 상태부터 후 상태로 변한다는
+            속성을 먹일 수 있다 그리고 @keyframes 다음에 만들고 싶은 애니메
+            이션의 이름을 부여해야 된다(CoinFlip 처럼) 이렇게 해야 아래
+            애니메이션 엘레멘트가 이 keyframes를 지목할 수 있다*/
+      #ex2 {
+        border: 5px solid teal;
+        border-radius: 50%;
+        animation: CoinFlip 2s ease-in-out infinite;
+        /* 2. 위에서 만든 CoinFlip을 실행시키기 위해 애니메이션 속성을 먹이자
+            transition 속성 먹이는 것처럼 하면 되는데 가리키는 대상을
+            CoinFlip으로 허면 된다
+            위 애니메이션 속성 중 infinite은 코인플립 애니메이션을 무한번
+            계속해서 실행하도록 한다 */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <img
+      id="ex2"
+      src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1920x1080-brands-amazon-logo.jpg?auto=format&q=60&fit=max&w=930"
+    />
+  </body>
+</html>

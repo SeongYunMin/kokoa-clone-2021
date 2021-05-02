@@ -1,0 +1,57 @@
+.status-bar {
+  /* status bar에 있는 3개의 항목이 가로로 배열되게 해보자
+      즉 flex container로 만들어보자 */
+  display: flex;
+  /* justify-content: space-between; */
+  /* 근데 이렇게 space-between을 쓰면 가운데 정렬은 하는데 왼쪽
+      No Service 와 오른쪽 10%의 사이즈가 달라 시계가 가운데 딱 오질 못한다 
+      
+      1:따라서 우리는 시계를 딱 중앙에 오게 하기 위해 CSS Hack 을 해볼 것이다*/
+  justify-content: center;
+  padding: 5px;
+  /* 너무 상단에 딱 붙어 있으면 보기 안좋으므로 상태바에 패딩을 조금 주자 */
+  position: fixed;
+  top: 0px;
+  width: 99%;
+  background-color: inherit;
+  /* 이렇게 하면 스크롤이 있는 창에서도 status bar 상단에 고정되어 있는다 */
+}
+/* 이러면 status-bar이 원하는대로 정렬된다 근데 No Service 와 와이파이
+    이모티콘 사이에 공간이 없다 이걸 만들어주자 */
+.status-bar__column:first-child span {
+  /* 위 셀렉터는 수도 셀렉터와 컴비네이터를 함께 쓴것 이렇게 하면
+      status-bar__column 클래스 중 첫번째를 조준하고 그  자식 엘레먼트 중
+       span 엘레먼트만 지목해서 속성을 먹일 수 있다 */
+  margin-right: 5px;
+  /* 이 span의 오른쪽에만 마진으로 조금 줘서 wifi icon과 간격을 띄우자 */
+}
+.status-bar__column {
+  width: 33.3%;
+}
+/* 2: 우선 이렇게 각 칼럼들의 width를 33%로 벌려주고 */
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+/* 3: 두번쨰 칼럼인 시계가 가운데 오도록 flex를 해준다
+        이러면 첫번쨰 두번째 칼럼은 딱 맞는 위치에 온다 3번째도 우측밀착 시키자 */
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* 4:이렇게 세번쨰 칼럼을 우측 밀착시키면 깔끔해진다 다만 그렇게만 하면 배터리 표시
+      부분이 겹쳐진다 따라서 align-items: center 속성으로 펴주면 완성!
+    
+  이렇게 왜그런진 잘 모르지만 실해되면 예쁘게 되는 기술들을 CSS Hack이라고 한다*/
+
+/* 근데 배터리 부분이 너무 다닥다닥 붙어 있으므로 마진을 줘서 간격을 넓혀주자 */
+.status-bar__column .fa-battery-quarter {
+  margin: 0px 5px;
+}
+/* 이렇게 아이콘의 클래스 네임을 바로 셀렉트해서 마진을 상하로는 0 좌우로는
+      5px 씩 줬다 */
+/* 아 그리고 fontawesome 에선 원하는 아이콘의 사이즈도 고를 수 있다 ㅇㅇ
+      아이콘 사이즈 키우고 싶으면 아이콘의 클래스 네임 마지막에 fa-2x, fa-lg 등
+      을 넣으면 된다 */
+/* 6_5 Finish */

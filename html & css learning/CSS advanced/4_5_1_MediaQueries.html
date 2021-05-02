@@ -1,0 +1,61 @@
+<!-- Media Query 에 대해 알아보자
+CSS만을 이용해서 스크린의 사이즈를 알 수 있는 방법이다
+즉 우리가 컴퓨터로 볼때, 스마트폰으로 세로로 볼때, 가로로 볼때
+다 responsive하게 표현하고 싶을 때 필요하다 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seoul Times 6</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (max-width: 600px) {
+        div {
+          background-color: tomato;
+        }
+      }
+
+      /* 1.위에 @media를 쓰면 media query를 쓰게 되는 것이다
+                screen and (max-width: 600px){} 은 화면 폭이 최대 400px,
+                즉 600px 이하이면 div에 토마토색 속성을 먹이겠다는 뜻이다 */
+
+      /* @media screen and (max-width: 750px) and (min-width: 650px){} */
+      /* 위 주석 코드는 스크린 폭이 650px이상이고 750px이하일 때 속성을
+                먹일 수 있는 코드이다 이렇게 and 여러개 써서 조건을 만들 수 있다 */
+      @media screen and (min-width: 601px) and (max-width: 800px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      @media screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
+        div {
+          background-color: turquoise;
+        }
+      }
+      /* 이렇게 짜면 폭 구간 별로 다른 색상의 div를 표현할 수 있게 된다
+            완벽한 조건문이다 */
+      /* 요소 검사 왼쪽 위에 스마트폰 표시를 클릭하면 이 화면이 스마트폰
+            에서 어떻게 보여지는지 검사할 수  있는 디바이스 툴바 창이 열린다
+            그걸로 함 보자 */
+      /* 또한 위에 (orientation: landscape) 이 조건은 만약 화면이
+                가로모드, 즉 landscape모드일때 속성을 먹여라 이런 의미를 가진다
+                따라서 이걸 사용하면 휴대폰이 가로모드(landscape)인지 
+                세로모드(portrait)인지 인지해서 responsive하게 만들 수 있다 */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>Please flip your phone</span>
+  </body>
+</html>
