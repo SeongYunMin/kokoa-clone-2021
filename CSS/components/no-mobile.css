@@ -1,5 +1,5 @@
 #no-mobile {
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 100;
   height: 100%;
