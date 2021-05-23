@@ -238,5 +238,5 @@
 
 .reply:focus-within .reply__input {
   width: 98%;
-  transform: translateX(-13%);
+  transform: translateX(-1%);
 }
